@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 public class UserEntity extends BaseTimeEntity{
+
     @Id
     private String uid;
 
