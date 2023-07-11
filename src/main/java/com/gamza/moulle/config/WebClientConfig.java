@@ -10,7 +10,7 @@ public class WebClientConfig {
     @Bean
     public WebClient webClient(WebClient.Builder builder){
         return builder
-                .baseUrl("https://www.aladin.co.kr/ttb/api/")
+                .baseUrl("http://www.aladin.co.kr/ttb/api/ItemList.aspx")
                 .build();
     }
 }

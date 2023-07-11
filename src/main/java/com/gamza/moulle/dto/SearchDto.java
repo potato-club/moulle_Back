@@ -24,8 +24,6 @@ public class SearchDto {
         private String isbn;
         private LocalDateTime publishedDate;
         private int price;
-        private String imageLink;
-        private String imageLink2;
         private String description;
         private String bookIndex;
         private String bookDetailLink;
