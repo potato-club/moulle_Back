@@ -1,34 +1,34 @@
 package com.gamza.moulle.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.gamza.moulle.enums.ISBNType;
+import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class SearchDto {
+        private Integer total;
+        private List<ItemDto> items;
 
-    public Integer total; // 한번에 배열에 담아서 출력
-    List<Items> items = new ArrayList<>();
-
-    static class Items{
-        private String bookName;
-        private String author;
-        private String isbn;
-        private LocalDateTime publishedDate;
-        private int price;
-        private String description;
-        private String bookIndex;
-        private String bookDetailLink;
-        private String seriesId;
-
-
-    }
+        @Getter
+        @Setter
+        @NoArgsConstructor
+        @AllArgsConstructor
+        public static class ItemDto {
+                private Long id;
+                private String bookName;
+                private ISBNType isbnType;
+                private int isbn;
+                private String author;
+                private LocalDateTime publishedDate;
+                private int price;
+                private String description;
+                private String bookIndex;
+                private String bookDetailLink;
+                private String seriesId;
+        }
 }

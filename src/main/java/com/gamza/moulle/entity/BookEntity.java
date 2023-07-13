@@ -14,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Table(name = "search_result")
 public class BookEntity extends BaseTimeEntity{ // #뒤에 붙은게 알라딘api에서 제공하는 데이터와 맵핑될 이름
 
     @Id
