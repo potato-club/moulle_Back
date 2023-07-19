@@ -1,34 +1,20 @@
 package com.gamza.moulle.dto;
 
-import com.gamza.moulle.enums.ISBNType;
 import lombok.*;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class SearchDto {
-        private Integer total;
-        private List<ItemDto> items;
-
-        @Getter
-        @Setter
-        @NoArgsConstructor
-        @AllArgsConstructor
-        public static class ItemDto {
-                private Long id;
-                private String bookName;
-                private ISBNType isbnType;
-                private int isbn;
-                private String author;
-                private LocalDateTime publishedDate;
-                private int price;
-                private String description;
-                private String bookIndex;
-                private String bookDetailLink;
-                private String seriesId;
-        }
+       private String title;
+       private String isbn;
+       private String author;
+//       private LocalDateTime pubDate;
+       private int priceStandard;
+//       private String cover;
+       private String description;
+       private String toc;
+       private String link;
+       private String seriesId;
 }
