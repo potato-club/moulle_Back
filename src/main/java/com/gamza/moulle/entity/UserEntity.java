@@ -1,6 +1,8 @@
 package com.gamza.moulle.entity;
 
 import com.gamza.moulle.enums.UserRole;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,8 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Builder
 public class UserEntity extends BaseTimeEntity{
     @Id
     private String uid;
@@ -20,6 +24,8 @@ public class UserEntity extends BaseTimeEntity{
 
     @Column(nullable = false)
     private String nickname;
+    @Column
+    private String password;
 
     @OneToMany(mappedBy = "user")
     private List<UserBookEntity> userBooks = new ArrayList<>();
@@ -27,4 +33,5 @@ public class UserEntity extends BaseTimeEntity{
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserRole userRole;
+
 }
