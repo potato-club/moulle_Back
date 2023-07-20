@@ -2,6 +2,7 @@ package com.gamza.moulle.dto;
 
 import lombok.*;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@XmlRootElement(name = "item")
 public class SearchDetailDto {
     List<Items> items = new ArrayList<>();
 
