@@ -4,17 +4,13 @@ import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class SearchDetailDto {
-    List<Items> items = new ArrayList<>();
+    private List<Map<String, String>> items = new ArrayList<>();
 
-    public static class Items{
-        public String title;
-        public String author;
-        public String description;
-    }
 }
