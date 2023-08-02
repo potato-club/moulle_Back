@@ -1,7 +1,7 @@
 //package com.gamza.moulle.service;
 //
-//import com.gamza.moulle.dto.SearchDetailDto;
-//import com.gamza.moulle.dto.SearchDto;
+//import com.gamza.moulle.dto.aladin.SearchDetailDto;
+//import com.gamza.moulle.dto.aladin.Item;
 //import com.gamza.moulle.repository.BookRepository;
 //import lombok.RequiredArgsConstructor;
 //import org.springframework.beans.factory.annotation.Value;
@@ -26,7 +26,7 @@
 //    @Value("${aladin.url}")
 //    private String pageUrl;
 //
-//    public SearchDto searchDetail(String isbn){
+//    public Item searchDetail(String isbn){
 //        List<SearchDetailDto.Items> items = searchInfo(isbn).getItems();
 //
 //        if (items.isEmpty())
@@ -36,7 +36,7 @@
 //        String[] str = isbn.split(" ");
 //        Integer page = pageInfo(str[1]);
 //
-//        return SearchDto.builder()
+//        return Item.builder()
 //                .title(item.title)
 //                .author(item.author)
 //                .description(item.description)

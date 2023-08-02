@@ -1,5 +1,6 @@
-package com.gamza.moulle.dto;
+package com.gamza.moulle.dto.aladin;
 
+import com.gamza.moulle.dto.aladin.Item;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -11,6 +12,6 @@ import java.util.Map;
 @NoArgsConstructor
 @Builder
 public class SearchDetailDto {
-    private List<Map<String, String>> items = new ArrayList<>();
+    private List<Item> item;
 
 }

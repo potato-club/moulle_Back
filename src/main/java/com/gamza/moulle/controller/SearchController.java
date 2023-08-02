@@ -1,7 +1,6 @@
 package com.gamza.moulle.controller;
 
-import com.gamza.moulle.dto.SearchDetailDto;
-import com.gamza.moulle.dto.SearchDto;
+import com.gamza.moulle.dto.aladin.SearchDetailDto;
 import com.gamza.moulle.service.AladinSearchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
