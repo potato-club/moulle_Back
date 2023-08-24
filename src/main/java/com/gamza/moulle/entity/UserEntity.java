@@ -1,6 +1,7 @@
 package com.gamza.moulle.entity;
 
 import com.gamza.moulle.enums.UserRole;
+import io.netty.channel.unix.PeerCredentials;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,6 +14,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 public class UserEntity extends BaseTimeEntity{
 
