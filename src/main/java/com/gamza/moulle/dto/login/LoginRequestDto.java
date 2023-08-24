@@ -1,4 +1,4 @@
-package com.gamza.moulle.dto;
+package com.gamza.moulle.dto.login;
 
 import lombok.Getter;
 

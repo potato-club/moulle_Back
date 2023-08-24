@@ -14,7 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Builder
 public class UserEntity extends BaseTimeEntity{
 
     @Id
@@ -25,11 +24,11 @@ public class UserEntity extends BaseTimeEntity{
 
     @Column(nullable = false)
     private String nickname;
-    @Column
+    @Column(nullable = false)
     private String password;
 
     @OneToMany(mappedBy = "user")
-    private List<UserBookEntity> userBooks = new ArrayList<>();
+    private List<UserBookEntity> userBookList;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

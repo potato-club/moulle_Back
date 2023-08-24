@@ -1,9 +1,8 @@
 package com.gamza.moulle.service;
 
-import com.gamza.moulle.dto.LoginRequestDto;
-import com.gamza.moulle.dto.SignUpRequestDto;
+import com.gamza.moulle.dto.login.LoginRequestDto;
+import com.gamza.moulle.dto.login.SignUpRequestDto;
 import com.gamza.moulle.entity.UserEntity;
-import com.gamza.moulle.enums.UserRole;
 import com.gamza.moulle.error.ErrorCode;
 import com.gamza.moulle.error.exception.UnAuthorizedException;
 import com.gamza.moulle.jwt.JwtProvider;

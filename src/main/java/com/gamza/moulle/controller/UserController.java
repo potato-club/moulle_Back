@@ -1,12 +1,15 @@
 package com.gamza.moulle.controller;
 
-import com.gamza.moulle.dto.LoginRequestDto;
-import com.gamza.moulle.dto.SignUpRequestDto;
+import com.gamza.moulle.dto.mainpage.AchieceResponseDto;
+import com.gamza.moulle.dto.login.LoginRequestDto;
+import com.gamza.moulle.dto.login.SignUpRequestDto;
 import com.gamza.moulle.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @RestController()
 @RequestMapping("/user")
@@ -22,5 +25,9 @@ public class UserController {
     @PostMapping ("/signup")
     String localSignUp(@RequestBody SignUpRequestDto signUpRequestDto, HttpServletResponse response) {
         return userService.localSignUp(signUpRequestDto,response);
+    }
+    @GetMapping("/achieve")
+    List<AchieceResponseDto> myAchieve(HttpServletRequest request) {
+        return null;
     }
 }

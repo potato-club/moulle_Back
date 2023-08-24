@@ -20,7 +20,7 @@ public class UserBookEntity extends BaseTimeEntity {
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "book_id")
     private BookEntity book;
 
