@@ -67,8 +67,8 @@ public class UserBookService {
     //=======================================================
     //====================책장 속 책들=========================
     @Transactional
-    public Page<BookSimpleInfoResponseDto> getBookListOfShelf(Long id, HttpServletRequest request) {
-        Pageable pageable = PageRequest.of(1, 20); // 2nd page, 20 items per page
+    public Page<BookSimpleInfoResponseDto> getBookListOfShelf(Long id,int page, HttpServletRequest request) {
+        Pageable pageable = PageRequest.of(page-1, 20);
 
         QBookEntity qBookEntity = QBookEntity.bookEntity;
         List<BookEntity> books = jpaQueryFactory

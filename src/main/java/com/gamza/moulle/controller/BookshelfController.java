@@ -38,7 +38,7 @@ public class BookshelfController {
     //======================책장 속 책들 ========================
     @GetMapping("/shelf/{id}")
     public Page<BookSimpleInfoResponseDto> getBookListOfShelf(@PathVariable Long id, @RequestParam int page,HttpServletRequest request) {
-        return userBookService.getBookListOfShelf(id,request);
+        return userBookService.getBookListOfShelf(id,page,request);
     }
 
 }
