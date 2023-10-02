@@ -1,4 +1,4 @@
-package com.gamza.moulle.dto.mainpage;
+package com.gamza.moulle.dto.shelf;
 
 import lombok.Getter;
 

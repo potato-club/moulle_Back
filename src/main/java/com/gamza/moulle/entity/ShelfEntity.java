@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor
-public class BookshelfEntity {
+public class ShelfEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,6 +22,12 @@ public class BookshelfEntity {
     private String shelfName;
     @OneToMany
     private List<UserBookEntity> bookList;
+
+    public ShelfEntity (UserEntity userEntity,String shelfName) {
+        this.userEntity = userEntity;
+        this.shelfName = shelfName;
+    }
+    public void updateShelfName (String shelfName) {this.shelfName = shelfName;}
 
     public int getBookCount() {
         return (bookList !=null) ? bookList.size() : 0;

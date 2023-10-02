@@ -1,10 +1,11 @@
 package com.gamza.moulle.controller;
 
-import com.gamza.moulle.dto.aladin.SearchDetailDto;
+import com.gamza.moulle.dto.shelf.BookSaveRequestDto;
 import com.gamza.moulle.service.AladinSearchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Mono;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequiredArgsConstructor
@@ -15,8 +16,8 @@ public class SearchController {
 
     //책 자동저장
     @PostMapping("/auto-save")
-    public String autoSaveBook(@RequestParam String isbn){
-        return aladinSearchService.autoSaveBook(isbn);
+    public String autoSaveBook(@RequestBody BookSaveRequestDto bookSaveRequestDto, HttpServletRequest request){
+        return aladinSearchService.autoSaveBook(bookSaveRequestDto, request);
     }
     //책 수동저장
 

@@ -1,6 +1,6 @@
 package com.gamza.moulle.controller;
 
-import com.gamza.moulle.dto.mainpage.AchieceResponseDto;
+import com.gamza.moulle.dto.shelf.AchieceResponseDto;
 import com.gamza.moulle.dto.login.LoginRequestDto;
 import com.gamza.moulle.dto.login.SignUpRequestDto;
 import com.gamza.moulle.service.UserService;
@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping ("/signup")
-    String localSignUp(@RequestBody SignUpRequestDto signUpRequestDto, HttpServletResponse response) {
+    String localSignUp(@ModelAttribute SignUpRequestDto signUpRequestDto, HttpServletResponse response) {
         return userService.localSignUp(signUpRequestDto,response);
     }
     @GetMapping("/achieve")

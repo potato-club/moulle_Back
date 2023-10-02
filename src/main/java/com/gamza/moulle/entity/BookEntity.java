@@ -12,12 +12,14 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Table(name = "search_result")
 public class BookEntity extends BaseTimeEntity{ // #뒤에 붙은게 알라딘api에서 제공하는 데이터와 맵핑될 이름
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "shelf",nullable = false)
+    private ShelfEntity shelfEntity;
 
     @Column(nullable = false)
     private String bookName; //#title

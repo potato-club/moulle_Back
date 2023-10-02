@@ -2,6 +2,8 @@ package com.gamza.moulle.jwt;
 
 import com.gamza.moulle.entity.UserEntity;
 import com.gamza.moulle.enums.UserRole;
+import com.gamza.moulle.error.ErrorCode;
+import com.gamza.moulle.error.exception.NotFoundException;
 import com.gamza.moulle.repository.UserRepository;
 import com.gamza.moulle.service.jwt.CustomUserDetailService;
 import io.jsonwebtoken.*;
@@ -105,5 +107,8 @@ public class JwtProvider {
 
         return email;
     }
-
+    public UserEntity findByUserOnToken(HttpServletRequest request) {
+        String userEmail = this.getUserEmail(this.resolveAT(request));
+        return userRepository.findByEmail(userEmail).orElseThrow(()-> new NotFoundException(ErrorCode.NOT_FOUND_EXCEPTION.getMessage(),ErrorCode.NOT_FOUND_EXCEPTION));
+    }
 }
